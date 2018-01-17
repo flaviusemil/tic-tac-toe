@@ -1,0 +1,14 @@
+@import 'variables';
+@import 'fonts';
+
+body {
+  background-color: $background-color;
+}
+
+.main-title {
+  color: $main-header-color;
+  font-family: $main-header-font;
+  font-size: $main-header-size;
+  font-style: $main-header-font-style;
+  text-align: $main-header-text-align;
+}
