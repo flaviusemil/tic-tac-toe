@@ -1,19 +1,33 @@
-var canvas;
+import p5 from 'p5.min'
+import Page from './Page';
 
-function centerCanvas() {
-    var x = (windowWidth - width) / 2;
-    var y = (windowHeight - height) / 2;
-    canvas.position(x, y);
-}
+new p5();
+
+let page = new Page(windowWidth, windowHeight);
+console.log("Width: " + windowWidth);
+console.log("Height: " + windowHeight);
 
 function setup() {
-    canvas = createCanvas(600, 400);
-    centerCanvas();
-    background(153);
+    canvas = createCanvas(windowWidth, windowHeight);
+    background(56, 56, 56);
+}
 
-    line(0, 0, width, height);
+function drawHeader() {
+
+}
+
+function drawFooter() {
+
+}
+
+function draw() {
+    console.log("test");
+    textSize(48);
+    text("Tic Tac Toe", windowWidth / 2 - 48 * 2, 80);
+    fill(0, 102, 153, 51);
 }
 
 function windowResized() {
-    centerCanvas();
+    resizeCanvas(windowWidth, windowHeight);
+    background(56, 56, 56);
 }
